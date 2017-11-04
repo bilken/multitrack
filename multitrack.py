@@ -16,17 +16,15 @@ except:
 
 toWork = {
     13720:{'name':"Max Park"},
-    13721:{'name':"Max Milwaukie"},
-    13722:{'name':"Max Tacoma"},
-    3657:{'name':"Milport"},
-    3783:{'name':"99E and Concord"},
+    3783:{'name':"Concord and 99"},
     4195:{'name':"Oatfield and Roethe"},
     6211:{'name':"Webster and Thiessen"},
 }
 toHome = {
-    7627:{'name':"Orange at Oak", 'lines':[290]},
-    7631:{'name':"5th and Pine", 'lines':[30,33,99]},
-    13770:{'name':"Tacoma"},
+    7608:{'name':"Jefferson and 5th", 'lines':[290]},
+    3639:{'name':"Madison and 4th", 'lines':[30]},
+    7616:{'name':"Market and 5th", 'lines':[99]},
+    13776:{'name':'Milwaukie', 'lines':[32]},
 }
 times = {
     'Work' : toWork,
@@ -49,7 +47,7 @@ def get_times(locations):
         "json":"true",
         "locIDs":csvLocations,
         "arrivals":4,
-        "minutes":30,
+        "minutes":50,
     }
     args = urllib.urlencode(params)
     url = 'http://developer.trimet.org/ws/V1/arrivals?' + args
